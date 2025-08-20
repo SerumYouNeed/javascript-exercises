@@ -57,3 +57,9 @@ let newDiv = document.createElement("div");
 let txt = document.createTextNode("Hello world");
 newDiv.appendChild(txt)
 
+// EVENT LISTENER
+var button = document.getElementById("element-id").addEventListener("click", buttonClick);
+function buttonClick(e) { // e to jest event który obsługuje funkcja czyli click
+    console.log(e.target); // target to element na którym zawieszony jest event czyli button
+}
+
