@@ -58,8 +58,30 @@ let txt = document.createTextNode("Hello world");
 newDiv.appendChild(txt)
 
 // EVENT LISTENER
-var button = document.getElementById("element-id").addEventListener("click", buttonClick);
+var button = document.getElementById("element-id");
+
+button.addEventListener("click", buttonClick);
+
 function buttonClick(e) { // e to jest event który obsługuje funkcja czyli click
     console.log(e.target); // target to element na którym zawieszony jest event czyli button
+    console.log(e.clientX); // pozycja myszki na osi ox okna przeglądarki
+    console.log(e.offsetX); // pozycja myszki na osi ox od krawędzi elementu
+    console.log(e.shiftKey) // true / false w zależności czy podczas eventu jest wciśnięty czy nie
+    console.log(e.ctrltKey) // true / false w zależności czy podczas eventu jest wciśnięty czy nie
+    console.log(e.altKey) // true / false w zależności czy podczas eventu jest wciśnięty czy nie
 }
+
+button.addEventListener("dblclick", runEvent);
+button.addEventListener("dblclick", runEvent);
+button.addEventListener("mouseup", runEvent);
+button.addEventListener("mousedown", runEvent);
+button.addEventListener("mouseenter", runEvent); // odpala się przy najechaniu myszką na jakieś pole
+button.addEventListener("mouseleave", runEvent); // over/out działają identycznie ale inaczej na elementach wewnętrznych (te wyrzej na wewnętrznych nie działają)
+button.addEventListener("mousemove", runEvent); // śledzi ruch myszki
+
+function runEvent(e) {
+    console.log("RUN: " + e.type); // co to jest za event, typ
+}
+
+
 
