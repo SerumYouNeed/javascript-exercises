@@ -71,8 +71,7 @@ function buttonClick(e) { // e to jest event który obsługuje funkcja czyli cli
     console.log(e.altKey) // true / false w zależności czy podczas eventu jest wciśnięty czy nie
 }
 
-button.addEventListener("dblclick", runEvent);
-button.addEventListener("dblclick", runEvent);
+button.addEventListener("dblclick", runEvent); // podwójne kliknięcie
 button.addEventListener("mouseup", runEvent);
 button.addEventListener("mousedown", runEvent);
 button.addEventListener("mouseenter", runEvent); // odpala się przy najechaniu myszką na jakieś pole
