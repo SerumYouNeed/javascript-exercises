@@ -73,7 +73,7 @@ function buttonClick(e) { // e to jest event który obsługuje funkcja czyli cli
 
 button.addEventListener("dblclick", runEvent); // podwójne kliknięcie
 button.addEventListener("mouseup", runEvent); // ruchy myszką
-button.addEventListener("mousedown", runEvent);
+button.addEventListener("mousedown", runEvent); // ruch myszką
 button.addEventListener("mouseenter", runEvent); // odpala się przy najechaniu myszką na jakieś pole
 button.addEventListener("mouseleave", runEvent); // over/out działają identycznie ale inaczej na elementach wewnętrznych (te wyrzej na wewnętrznych nie działają)
 button.addEventListener("mousemove", runEvent); // śledzi ruch myszki
